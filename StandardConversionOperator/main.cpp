@@ -93,6 +93,9 @@ int main() {
 	}
 	else cout << "\t[null]" << endl;
 
+	/*dynamic_cast需要满足子类继承关系，类似于可以封箱操作，然后替换相同的方法？？？
+	而static_cast不需要封箱的限制？*/
+
 	cout << "static_cast from base class to child class:" << endl;
 	Parents * mother_s = new Parents("Mother who pretend to be a my daugher");
 	Children * daughter_s = static_cast<Children*> (mother_s);  //no error, but not safe
